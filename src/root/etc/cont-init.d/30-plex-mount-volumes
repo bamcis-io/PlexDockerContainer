@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Mounting volumes in fstab"
+
+mount -a
+
+echo "Completed mounting volumes"

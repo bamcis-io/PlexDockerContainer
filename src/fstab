@@ -1,0 +1,1 @@
+//<insert IP address or host name>/<share>/<path> /data cifs username=john.smith,password=mysecurepassword,sec=ntlm,iocharset=utf8,_netdev 0 0

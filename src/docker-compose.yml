@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+    plex:
+        image: bamcis/plex:latest
+        cap_add:
+        - SYS_ADMIN
+        - DAC_READ_SEARCH
+        container_name: plex
+        restart: always
+        ports:
+        - 32400:32400/tcp
+        - 3005:3005/tcp
+        - 8324:8324/tcp
+        - 32469:32469/tcp
+        - 1900:1900/udp
+        - 32410:32410/udp
+        - 32412:32412/udp
+        - 32413:32413/udp
+        - 32414:32414/udp
+        environment:
+            TZ: "America/New_York"
+            PLEX_CLAIM: ""
+            PUID: 1001
+            PGID: 1001
+        volumes:
+            - /c/Docker/Plex/Config:/config
+            - /c/Docker/Plex/Transcode:/transcode
+            - /c/Docker/Plex/fstab:/etc/fstab
+        networks:
+        - default
+        
